@@ -1,0 +1,9 @@
+docker volume create my-volume
+docker run -it -v my-volume:/data ubuntu bash
+echo "Hello from volume" > /data/hello.txt
+
+/////other method
+
+docker run -it -v my-volume:/data ubuntu bash
+cat /data/hello.txt
+//output:Hello from volume
